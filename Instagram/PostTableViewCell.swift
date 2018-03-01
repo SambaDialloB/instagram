@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
 class PostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var postCaption: UILabel!
+    @IBOutlet weak var postImage: PFImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +26,5 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
 }

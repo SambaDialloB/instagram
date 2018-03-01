@@ -23,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://ass4.herokuapp.com/parse"
             })
         )
-//        // check if user is logged in.
-//        if PFUser.current() != nil {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            print("Autologged in")
-//            // view controller currently being set in Storyboard as default will be overridden
-//            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "homeNavC")
-//        }
-//        
+        // check if user is logged in.
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            print("Autologged in")
+            // view controller currently being set in Storyboard as default will be overridden
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "TopNavController")
+        }
+//
         
         
         NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in

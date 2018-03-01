@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
                 print("liiiiiiit made a user")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }else{
-                print(error?.localizedDescription)
+                print(error?.localizedDescription as Any)
             }
         })
             
